@@ -1,31 +1,27 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Threading.Tasks;
+using PrefixMapSum.Services;
 
 namespace PrefixMapSum
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static Task Main(string[] args)
         {
-            // Setup DI
-            var serviceProvider = new ServiceCollection()
-                .AddLogging()
-                .AddSingleton<IMapSum, PrefixMapSum>()
-                .BuildServiceProvider();
+            using var host = CreateHostBuilder(args).Build();
 
-            //configure console logging
-            serviceProvider
-                .GetService<ILoggerFactory>()
-                .AddConsole(LogLevel.Debug);
+            return host.RunAsync();
+        }
 
-            var logger = serviceProvider.GetService<ILoggerFactory>()
-                .CreateLogger<Program>();
-            logger.LogDebug("Starting application");
-
-            Console.WriteLine("Hello World!");
-
-            logger.LogDebug("All done!");
+        private static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .ConfigureServices((_, services) =>
+                {
+                    services.AddTransient<IMapSum, PrefixMapSum>();
+                    services.AddHostedService<PrefixMapService>();
+                });
         }
     }
 }
