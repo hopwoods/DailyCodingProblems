@@ -4,7 +4,7 @@ namespace Rand5
 {
     internal class RandomNumberGenerator : IRandomNumberGenerator
     {
-        public static int Rand7()
+        private static int Rand7()
         {
             return new Random().Next(1, 8);
         }
