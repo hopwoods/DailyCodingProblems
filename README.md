@@ -29,3 +29,17 @@ This problem was asked by Two Sigma.
 Using a function `rand7()` that returns an integer from 1 to 7 (inclusive) with uniform probability, implement a function `rand5()` that returns an integer from 1 to 5 (inclusive).
 
 [Solution](https://github.com/hopwoods/DailyCodingProblems/tree/master/Rand5)
+
+## Daily Coding Problem - Binary Tree Deepest Node
+This problem was asked by Google.
+
+Given the root of a binary tree, return a deepest node. For example, in the following tree, return d.
+```
+    a
+   / \
+  b   c
+ /
+d
+```
+
+[Solution](https://github.com/hopwoods/DailyCodingProblems/tree/master/BinaryTree)
