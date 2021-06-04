@@ -16,10 +16,6 @@ namespace BinaryTree
             tree.Insert("b");
             tree.Insert("c");
             tree.Insert("d");
-            tree.Insert("e");
-            tree.Insert("f");
-            tree.Insert("g");
-            tree.Insert("h");
 
             // Printing the height of tree
             Console.WriteLine($"The tree has {tree.Height()} levels");
