@@ -6,7 +6,7 @@ namespace BinaryTree
     {
         /// <summary>
         /// This problem was asked by Google.
-        /// Given the root of a binary tree, return a deepest node.<br/>
+        /// Given the root of a binary tree, return the deepest node.
         /// </summary>
         /// <param name="args"></param>
         private static void Main(string[] args)
@@ -18,6 +18,8 @@ namespace BinaryTree
             tree.Insert("d");
             tree.Insert("e");
             tree.Insert("f");
+            tree.Insert("g");
+            tree.Insert("h");
 
             // Printing the height of tree
             Console.WriteLine($"The tree has {tree.Height()} levels");

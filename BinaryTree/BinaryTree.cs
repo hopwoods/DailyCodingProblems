@@ -5,17 +5,23 @@ namespace BinaryTree
 {
     internal class BinaryTree : IBinaryTree
     {
+        #region Private Properites & Constructors
+
         private TreeNode Root { get; set; }
+
+        public BinaryTree()
+        {
+            
+        }
 
         public BinaryTree(string key)
         {
             Root = new TreeNode(key);
         }
 
-        public BinaryTree()
-        {
-            
-        }
+        #endregion
+
+        #region Public Methods
 
         public int Height()
         {
@@ -63,17 +69,19 @@ namespace BinaryTree
 
         public void Insert(string key)
         {
-            if (Root == null)
+            Insert(Root, key);
+        }
+        
+        public void Insert(TreeNode temp, string key)
+        {
+            if (temp == null)
             {
                 Root = new TreeNode(key);
                 return;
             }
 
             var queue = new Queue<TreeNode>();
-
-            queue.Enqueue(Root);
-
-            var temp = Root;
+            queue.Enqueue(temp);
 
             // Do level order traversal until we find
             // an empty place.
@@ -94,9 +102,10 @@ namespace BinaryTree
                 }
 
                 queue.Enqueue(temp.Right);
-                Root = temp;
             }
         }
+
+        #endregion
     }
 }
     

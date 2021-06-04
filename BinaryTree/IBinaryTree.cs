@@ -27,9 +27,16 @@
         TreeNode GetDeepestNode(TreeNode root);
 
         /// <summary>
-        /// Method to insert element in binary tree.
+        /// Method to insert value into the first empty spot in the binary tree.
         /// </summary>
         /// <param name="key">Value to insert</param>
         void Insert(string key);
+
+        /// <summary>
+        /// Method to insert value into the first empty spot in a given <see cref="TreeNode"/>.
+        /// </summary>
+        /// <param name="temp">Node to traverse.</param>
+        /// <param name="key">Value to insert</param>
+        void Insert(TreeNode temp, string key);
     }
 }
