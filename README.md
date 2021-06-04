@@ -42,4 +42,4 @@ Given the root of a binary tree, return a deepest node. For example, in the foll
 d
 ```
 
-[Solution](https://github.com/hopwoods/DailyCodingProblems/tree/master/binarytree)
+[Solution](https://github.com/hopwoods/DailyCodingProblems/tree/master/BinaryTree)
