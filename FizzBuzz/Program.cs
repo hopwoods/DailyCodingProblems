@@ -1,4 +1,5 @@
 ﻿using System;
+using FizzBuzz.Factories;
 
 namespace FizzBuzz
 {
