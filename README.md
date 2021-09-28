@@ -79,3 +79,5 @@ Given a positive integer number (for example, `42`), determine its Roman numeral
 >| 846    | DCCCXLVI | -         | DCC   | XL     | VI    |
 >| 1999   | MCMXCIX  | M         | CM    | XC     | IX    |
 >| 2008   | MMVIII   | MM        | -     | -      | VIII  |
+
+[Solution](https://github.com/hopwoods/DailyCodingProblems/tree/master/RomanNumeralCalculator
